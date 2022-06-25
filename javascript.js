@@ -71,9 +71,21 @@ function makePizza() {
 
     let arr1 = ['Cheese', 'Ham', 'Bits', 'Tomatoes'];
 
-    document.getElementById("pizza").innerHTML = arr1.join("A" + " " + "Tasty" + " " + "Pizza" + " " + "With" + " ");
+    document.getElementById("pizza").innerHTML = arr1.join(" " + "A" + " " + "Tasty" + " " + "Pizza" + " " + "With" + " ");
 }
 makePizza();
 
-// Harder Excercise - Capitalise every element
+// Harder Excercise - Capitalise every element - Array Map function and String#uppercase function
+
+
+let vehicleParts = ['Wheel', 'Tire', 'Engine', 'Pistons', 'Diesel'];
+
+let upper = vehicleParts.map(element => {
+
+    return element.toUpperCase();
+})
+
+document.getElementById("vehicle").innerHTML = upper;
+
+
 
