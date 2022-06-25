@@ -15,7 +15,7 @@
 // console.log(myFloat);
 
 
-// Morning - Afternoon - Night
+// Morning - Afternoon - Night --------------------------
 
 let day = new Date();
 let hr = day.getHours();
@@ -32,7 +32,7 @@ if (hr == 12 && hour < 18) {
 console.log(hr, hour)
 
 
-// Sandwich Calculator 
+// Sandwich Calculator ----------------------------------
 
 const sandwichCalculator = (bread, cheese) => {
     if (bread / 2 > cheese) return cheese;
@@ -40,38 +40,40 @@ const sandwichCalculator = (bread, cheese) => {
 }
 sandwichCalculator(6, 4)
 
-// Lunar Countdown
+// Lunar Countdown --------------------------------------
 
-let array = ["cheese", "ham", "toast"];
+// let array = ["cheese", "ham", "toast"];
 
-if (array.indexOf("cheese"));
-alert("Cheese")
-if (array.indexOf("ham"));
-alert("Ham")
-if (array.indexOf("toast")) {
-    alert("BlastOff")
-}
-console.log(array)
+// if (array.indexOf("cheese"));
+// alert("Cheese")
+// if (array.indexOf("ham"));
+// alert("Ham")
+// if (array.indexOf("toast")) {
+//     alert("BlastOff")
+// }
+// console.log(array)
 
 
-// Function instead of for loop
+// Function instead of for loop ------------------------
+
 const arr = ['cats', 'dogs', 'spanners', 'Lemons', 'candy']
 
-const list = arr.reduce((sum, current) => sum+current, 0);
+const list = arr.reduce((sum, current) => sum + current, 0);
 
-arr.map(i => i*2).reduce((sum,current) => sum+current);
+arr.map(i => i * 2).reduce((sum, current) => sum + current);
 
 console.log(arr)
 
 
+// Pizza Excercise
 
-// for (let i = 0; i < arr.length; i++) {
+function makePizza() {
 
-//   function sumArray(element) {     
-//         sum = 0  
-//         for(let num of element) sum += num
-//         return sum
-//      }
-// sumArray(element)
-// }
+    let arr1 = ['Cheese', 'Ham', 'Bits', 'Tomatoes'];
+
+    document.getElementById("pizza").innerHTML = arr1.join("A" + " " + "Tasty" + " " + "Pizza" + " " + "With" + " ");
+}
+makePizza();
+
+// Harder Excercise - Capitalise every element
 
