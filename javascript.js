@@ -53,8 +53,25 @@ if (array.indexOf("toast")) {
 }
 console.log(array)
 
-products = ['cats', 'dogs', 'spanners', 'Lemons', 'candy']
-for (let i = 0; i < products.length; i++) {
 
-}
-console.log(products)
+// Function instead of for loop
+const arr = ['cats', 'dogs', 'spanners', 'Lemons', 'candy']
+
+const list = arr.reduce((sum, current) => sum+current, 0);
+
+arr.map(i => i*2).reduce((sum,current) => sum+current);
+
+console.log(arr)
+
+
+
+// for (let i = 0; i < arr.length; i++) {
+
+//   function sumArray(element) {     
+//         sum = 0  
+//         for(let num of element) sum += num
+//         return sum
+//      }
+// sumArray(element)
+// }
+
