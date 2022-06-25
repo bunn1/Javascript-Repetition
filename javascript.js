@@ -53,3 +53,8 @@ if (array.indexOf("toast")) {
 }
 console.log(array)
 
+products = ['cats', 'dogs', 'spanners', 'Lemons', 'candy']
+for (let i = 0; i < products.length; i++) {
+
+}
+console.log(products)
