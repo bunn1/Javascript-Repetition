@@ -86,17 +86,22 @@ let upper = vehicleParts.map(element => {
 })
 document.getElementById("vehicle").innerHTML = upper;
 
-// Excercise calculate todays date / Today is: / Current time is:
+// Excercise calculate todays date / Today is: / Current time is: in the Console
 
-let today = new Date();
+let today = new Date()
+let month = today.getMonth()
 let day = today.getDay();
 let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let hour = today.getHours();
 let minute = today.getMinutes();
 let second = today.getSeconds();
 
-document.getElementById("datum").innerHTML = today;
-
 console.log("Today is:", dayList[day]);
 console.log("Current Time is:", hour, minute, second);
+
+// Show Year and Time in HTML browser
+
+document.getElementById("datum").innerHTML =  today.getFullYear()+" "+ today.getHours() +" "+ today.getMinutes() +" " + today.getSeconds();
+
+
 
