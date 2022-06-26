@@ -103,5 +103,37 @@ console.log("Current Time is:", hour, minute, second);
 
 document.getElementById("datum").innerHTML =  today.getFullYear()+" "+ today.getHours() +" "+ today.getMinutes() +" " + today.getSeconds();
 
+// Area Triangel / Base * Height / 2
+
+
+// const baseValue = prompt('Enter the base of a triangle: ');
+// const heightValue = prompt('Enter the heightValue of a triangle: ');
+
+// const areaValue = (baseValue * heightValue) / 2;
+
+// console.log(`The area of the triangle is ${areaValue}`);
+
+// JavaScript program to find the area of a triangle
+
+const side1 = parseInt(prompt('Enter side1: '));
+const side2 = parseInt(prompt('Enter side2: '));
+const side3 = parseInt(prompt('Enter side3: '));
+
+// calculate the semi-perimeter
+const s = (side1 + side2 + side3) / 2;
+
+//calculate the area
+const areaValue1 = Math.sqrt(
+  s * (s - side1) * (s - side2) * (s - side3)
+);
+
+console.log(
+  `The area of the triangle is ${areaValue1}`
+);
+
+// Program to calculate days left until next Christmas
+
+today = new Date();
+
 
 
