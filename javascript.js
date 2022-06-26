@@ -17,19 +17,19 @@
 
 // Morning - Afternoon - Night --------------------------
 
-let day = new Date();
-let hr = day.getHours();
-let hour = 18
+let day1 = new Date();
+let hr = day1.getHours();
+let hour1 = 18
 
 if (0 && hr < 12) {
     document.getElementById("para").innerHTML = "Morning";
 }
-if (hr == 12 && hour < 18) {
+if (hr == 12 && hour1 < 18) {
     document.getElementById("para").innerHTML = "Afternoon";
 } else {
     document.getElementById("para").innerHTML = "Night"
 }
-console.log(hr, hour)
+console.log(hr, hour1)
 
 
 // Sandwich Calculator ----------------------------------
@@ -84,8 +84,19 @@ let upper = vehicleParts.map(element => {
 
     return element.toUpperCase();
 })
-
 document.getElementById("vehicle").innerHTML = upper;
 
+// Excercise calculate todays date / Today is: / Current time is:
 
+let today = new Date();
+let day = today.getDay();
+let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let hour = today.getHours();
+let minute = today.getMinutes();
+let second = today.getSeconds();
+
+document.getElementById("datum").innerHTML = today;
+
+console.log("Today is:", dayList[day]);
+console.log("Current Time is:", hour, minute, second);
 
