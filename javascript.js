@@ -94,14 +94,14 @@ let day = today.getDay();
 let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let hour = today.getHours();
 let minute = today.getMinutes();
-let second = today.getSeconds();
+let second1 = today.getSeconds();
 
 console.log("Today is:", dayList[day]);
-console.log("Current Time is:", hour, minute, second);
+console.log("Current Time is:", hour, minute, second1);
 
 // Show Year and Time in HTML browser
 
-document.getElementById("datum").innerHTML =  today.getFullYear()+" "+ today.getHours() +" "+ today.getMinutes() +" " + today.getSeconds();
+document.getElementById("datum").innerHTML = today.getFullYear() + " " + today.getHours() + " " + today.getMinutes() + " " + today.getSeconds();
 
 // Area Triangel / Base * Height / 2
 
@@ -124,16 +124,45 @@ const s = (side1 + side2 + side3) / 2;
 
 //calculate the area
 const areaValue1 = Math.sqrt(
-  s * (s - side1) * (s - side2) * (s - side3)
+    s * (s - side1) * (s - side2) * (s - side3)
 );
 
 console.log(
-  `The area of the triangle is ${areaValue1}`
+    `The area of the triangle is ${areaValue1}`
 );
 
 // Program to calculate days left until next Christmas
 
 today = new Date();
 
+let cmas = new Date(today.getFullYear(), 11, 25);
+
+if (today.getMonth() == 11 && today.getDate() > 25) {
+    cmas.setFullYear(cmas.getFullYear() + 1)
+}
+let one_day = 1000 * 60 * 60 * 24;
+
+console.log(Math.ceil((cmas.getTime() - today.getTime()) / (one_day)) +
+    " days left until Christmas!");
 
 
+//   2:nd version calculate days
+
+let second = 1000;
+minute = second * 60;
+hour = minute * 60;
+day = hour * 24;
+
+let countDown = new Date("december 24, 2022 00:00:00").getTime();
+
+   let x = setInterval(function() {
+
+        let now = new Date().getTime();
+        let distance = countDown - now;
+
+        document.getElementById("days").innerHTML = Math.floor(distance / (day));
+        document.getElementById("hours").innerHTML = Math.floor(distance / (day)) / (hour);
+        document.getElementById("minutes").innerHTML = Math.floor(distance / (hour)) / (minute);
+        document.getElementById("seconds").innerHTML = Math.floor(distance / (minute)) / second;
+
+   }, second);
